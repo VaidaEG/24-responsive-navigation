@@ -38,10 +38,16 @@
         }
             .burger div {
                 width: 25px;
-                height: 5px;
+                height: 3px;
                 background-color: rgb(226,226,226);
                 margin: 5px;  
             }
+    .background {
+        background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/web.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 92vh;
+    }
 @media screen and (max-width: 1024px) {
     .nav-links {
         width: 60%;
@@ -84,4 +90,14 @@
         opacity: 1;
         transform: translateX(0px);
     }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }

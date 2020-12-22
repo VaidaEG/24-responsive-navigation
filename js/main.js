@@ -5,11 +5,16 @@ const navSlide = () => {
     // Toggle Nav
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
-    });
     // Animate Links
     navLinks.forEach((link, index) => {
-        link.style.animation = `navLinkFade 0.5 ease forwards ${index / 7 + 2}s`;
-
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5 ease forwards ${index / 7 + 1.5}s`;
+            }
+        });
+        // Burger Animation
+        burger.classList.toggle('toggle');
     });
 }
 navSlide();
