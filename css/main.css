@@ -47,6 +47,7 @@
         background-size: cover;
         background-position: center;
         height: 92vh;
+        max-width: 100%;
     }
 @media screen and (max-width: 1024px) {
     .nav-links {
@@ -54,7 +55,12 @@
     }           
 }
 @media screen and (max-width: 768px) {
+    html {
+        position: relative;
+        overflow-x: hidden;
+    }
     body {
+        position: relative;
         overflow-x: hidden;
     }
         .nav-links {
